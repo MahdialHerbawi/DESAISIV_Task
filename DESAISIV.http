@@ -1,0 +1,6 @@
+@DESAISIV_HostAddress = http://localhost:5129
+
+GET {{DESAISIV_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
