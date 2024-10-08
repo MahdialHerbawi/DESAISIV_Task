@@ -23,12 +23,18 @@ namespace DESAISIV.Controllers
 
             if (!ModelState.IsValid)
             {
-                return BadRequest(ModelState); 
+                return BadRequest(ModelState);
+
+            }
+            else
+            {
+                _dataContext.Books.Add(book);
+                await _dataContext.SaveChangesAsync();
+                return Ok(await _dataContext.Books.ToListAsync());
+               
             }
 
-            _dataContext.Books.Add(book);
-            await _dataContext.SaveChangesAsync();
-            return Ok(await _dataContext.Books.ToListAsync());
+            
         }
 
 
