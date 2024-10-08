@@ -15,6 +15,8 @@ namespace DESAISIV.Controllers
             _dataContext = dataContext;
         }
 
+        // Add New Book Method 
+
         [HttpPost]
         [Route("Add New Book")]
         public async Task<ActionResult<List<Book>>> AddBook(Book book)
@@ -37,7 +39,7 @@ namespace DESAISIV.Controllers
             
         }
 
-
+        // Delete Method
         [HttpDelete]
         [Route("Delete the book")]
 
@@ -64,6 +66,8 @@ namespace DESAISIV.Controllers
 
         }
 
+        // Edit Method
+
         [HttpPut("{id}")]
         
         public async Task<ActionResult<Book>> EditBook(int id, Book updatedBook)
@@ -86,7 +90,7 @@ namespace DESAISIV.Controllers
         }
 
 
-
+        // Get All Books Method
         [HttpGet]
         [Route("Show All The Books")]
         public async Task<ActionResult<List<Book>>> ShowBooks()
@@ -111,7 +115,7 @@ namespace DESAISIV.Controllers
 
 
 
-        //test test
+       
 
     }
 }
