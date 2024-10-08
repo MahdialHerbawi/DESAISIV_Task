@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DESAISIV
 {
+    // The Book Model
     public class Book
     {
         public int Id { get; set; }
