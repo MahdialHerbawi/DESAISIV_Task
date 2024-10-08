@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using DESAISIV.customValidtion;
+using System.ComponentModel.DataAnnotations;
 
 namespace DESAISIV
 {
@@ -9,7 +10,9 @@ namespace DESAISIV
         public string Title { get; set; }
         [Required(ErrorMessage = "this filed can't be empty")]
         public string Author { get; set; }
-        [Required (ErrorMessage ="only accepte numbers years dates only")]
+        
+
+        [ValidPublicationYear(1000, ErrorMessage = "Publication year must be between 1000 and the current year.")]
         public int PublicationYear { get; set; }
 
 
